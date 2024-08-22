@@ -1,9 +1,10 @@
 import "./App.css";
+import Header from "./components/Header/Header";
 
 function App() {
   return (
     <>
-      <h1>Temple Paralax</h1>
+      <Header />
     </>
   );
 }
