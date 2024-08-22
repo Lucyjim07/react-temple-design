@@ -3,7 +3,7 @@ import "./Header.css";
 const Header = () => {
 
   return (
-    <header className="header" id="header">
+    <header className="header blur-header" id="header">
       <nav className="nav container">
         <a href="" className="nav__logo">
           <i className="ri-ancient-gate-line"></i>
@@ -59,3 +59,4 @@ export default Header;
 
 // TODO: Crear funcionalidad para mostrar y quitar el menú en tamaño pequeño (video 7:40)
 // TODO: Crear funcionalidad para que cuando se hace click en cualquiern item del menu, el menú se quite (video 8:05)
+// TODO: Crear funcionalidad para que cuando se haga scroll en la pantalla, el header se convierta en blur (video 21:12)
