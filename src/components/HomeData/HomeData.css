@@ -1,0 +1,107 @@
+.home__data {
+    position: relative;
+    text-align: center;
+    z-index: var(--z-tooltip);
+}
+
+.home__title {
+    font-size: var(--biggest-font-size);
+    margin-bottom: 2rem;
+}
+
+.home__description {
+    font-weight: var(--font-medium);
+    margin-bottom: 2rem;
+}
+
+.home__button {
+    display: inline-flex;
+    background: var(--gradient-color);
+    color: var(--black-color);
+    font-weight: var(--font-semi-bold);
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    transition: box-shadow .4s;
+}
+
+.home__button:hover {
+    box-shadow: 0 16px 48px hsla(353, 90%, 56%, .4);
+}
+
+
+.home__lantern-1,
+.home__lantern-2 {
+    position: absolute;
+    width: 50px;
+}
+
+.home__lantern-1 {
+    top: 2.5rem;
+    right: 0.5rem;
+    rotate: 15deg;
+}
+
+.home__lantern-2 {
+    left: .75rem;
+    bottom: -5rem;
+    rotate: -15deg;
+}
+
+/* For small devices */
+@media screen and (max-width: 320px) {
+    .home__title {
+        font-size: 2rem;
+    }
+}
+
+/* For medium device */
+@media screen and (min-width: 576px) {
+    .home__data {
+        max-width: 380px;
+        margin-inline: auto;
+    }
+}
+
+/* For large devices */
+@media screen and (min-width: 1150px) {
+    .home__data {
+        min-width: 610px;
+        text-align: initial;
+        margin: 0;
+    }
+
+    .home__description {
+        padding-right: 8rem;
+        margin-bottom: 3rem;
+    }
+
+    .home__lantern-1,
+    .home__lantern-2 {
+        width: 80px;
+    }
+
+    .home__lantern-1 {
+        top: 6.5rem;
+        right: 4rem;
+    }
+
+    .home__lantern-2 {
+        left: initial;
+        right: 14rem;
+        bottom: -3.5rem;
+    }
+}
+
+/* For 2K resolutions (2048 * 1152) */
+@media screen and (min-width: 2048px) and (min-height: 1100px) {
+    .home__data {
+        align-self: center;
+    }
+}
+
+/* For taller devices */
+@media screen and (max-width: 1150px) and (min-height: 900px) {
+    .home__data {
+        align-self: center;
+    }
+}
