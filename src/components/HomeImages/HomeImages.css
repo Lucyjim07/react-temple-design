@@ -8,10 +8,81 @@
     filter: saturate(1.3);
 }
 
+.home__img-1 {
+    animation-duration: 5s;
+    animation-name: wind;
+}
+
+.home__img-6 {
+    animation-duration: 1.5s;
+    animation-name: upAndDownSmall;
+    animation-timing-function: ease-in-out;
+}
+
+.home__img-3 {
+    animation-duration: 1.5s;
+    animation-name: upAndDownLarge;
+    animation-timing-function: ease-in-out;
+}
+
+.home__img-5 {
+    animation-duration: 1.5s;
+    animation-name: upAndDownLarge;
+    animation-timing-function: ease-in-out;
+}
+
+.home__img-2 {
+    animation-duration: 1.5s;
+    animation-name: upAndDownLarge;
+    animation-timing-function: ease-in-out;
+}
+
+.home__img-4 {
+    animation-duration: 1.5s;
+    animation-name: upAndDownSmall;
+    animation-timing-function: ease-in-out;
+}
+
+
+
 /* For medium device */
 @media screen and (min-width: 576px) {
     .home__images img {
         width: initial;
         right: 0;
+    }
+}
+
+
+@keyframes wind {
+    0% {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 100%;
+    }
+}
+
+@keyframes upAndDownSmall {
+    0% {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+
+@keyframes upAndDownLarge {
+    0% {
+        opacity: 0;
+        transform: translateY(400px);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(0);
     }
 }

@@ -2,6 +2,10 @@
     position: relative;
     text-align: center;
     z-index: var(--z-tooltip);
+
+    animation-duration: 1.5s;
+    animation-name: upAndDown;
+    animation-timing-function: ease-in-out;
 }
 
 .home__title {
@@ -46,6 +50,8 @@
     bottom: -5rem;
     rotate: -15deg;
 }
+
+
 
 /* For small devices */
 @media screen and (max-width: 320px) {
@@ -103,5 +109,17 @@
 @media screen and (max-width: 1150px) and (min-height: 900px) {
     .home__data {
         align-self: center;
+    }
+}
+
+
+@keyframes upAndDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(0);
     }
 }
