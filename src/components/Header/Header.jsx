@@ -1,17 +1,31 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Header.css";
 
 const Header = () => {
-
   const [showMenu, setShowMenu] = useState(false);
-  let showMenuStyle = showMenu ? 'show-menu' : '';
+  const [blurHeader, setBlurHeader] = useState(false);
+
+  let showMenuStyle = showMenu ? "show-menu" : "";
+  let scrollHeaderStyle = blurHeader ? "blur-header" : "";
 
   const handleShowMenu = () => {
-    setShowMenu(showMenu => !showMenu);
-  }
+    setShowMenu((showMenu) => !showMenu);
+  };
+
+  useEffect(() => {
+    const scrollHandler = () => {
+      window.scrollY >= 50 ? setBlurHeader(true) : setBlurHeader(false);
+    };
+    window.addEventListener("scroll", scrollHandler);
+    scrollHandler();
+
+    return () => {
+      window.removeEventListener("scroll", scrollHandler);
+    };
+  }, []);
 
   return (
-    <header className="header blur-header" id="header">
+    <header className={`header ${scrollHeaderStyle}`} id="header">
       <nav className="nav container">
         <a href="#" className="nav__logo">
           <i className="ri-ancient-gate-line"></i>
@@ -63,5 +77,3 @@ const Header = () => {
 };
 
 export default Header;
-
-// TODO: Crear funcionalidad para que cuando se haga scroll en la pantalla, el header se convierta en blur (video 21:12)
