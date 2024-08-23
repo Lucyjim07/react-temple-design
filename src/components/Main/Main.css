@@ -37,20 +37,6 @@
         margin-inline: auto;
     }
 
-    .nav {
-        height: calc(var(--header-height) + 2rem);
-    }
-
-    .nav__toggle,
-    .nav__close {
-        display: none;
-    }
-
-    .nav__list {
-        flex-direction: row;
-        column-gap: 4rem;
-    }
-
     .home__container {
         height: 960px;
     }

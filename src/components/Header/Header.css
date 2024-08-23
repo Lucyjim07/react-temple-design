@@ -86,3 +86,20 @@
         transition: top .4s;
     }
 }
+
+/* For large devices */
+@media screen and (min-width: 1150px) {
+    .nav {
+        height: calc(var(--header-height) + 2rem);
+    }
+
+    .nav__toggle,
+    .nav__close {
+        display: none;
+    }
+
+    .nav__list {
+        flex-direction: row;
+        column-gap: 4rem;
+    }
+}
