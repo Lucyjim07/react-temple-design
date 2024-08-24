@@ -2,6 +2,9 @@
 
 Este proyecto está basado en el tutoria de [youtube](https://www.youtube.com/watch?v=bDUhw9mgvaU&t=1164s)
 
+![Vista previa del proyecto finalizado](./public/preview.gif "diseño templo")
+
+
 ## Tecnologías usadas
 - **HTML, CSS y Javascript**
 - **Vite**
